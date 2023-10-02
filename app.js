@@ -31,3 +31,9 @@ onEvent("buttonCreate", "click", function () {
 onEvent("buttonBack", "click", function () {
     setScreen("screenMaker");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      document.getElementById("loader").style.display = "none";
+    }, 5000);
+  });

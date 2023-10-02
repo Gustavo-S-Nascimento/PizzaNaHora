@@ -1,121 +1,382 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- prefetch images: https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ -->
-    <link rel="prefetch" as="image" href="https://studio.code.org/v3/assets/5-IaxRvGY4VSCpbMf9JSgaFyrw9l6lBpwMY5QG1_6L4/client.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="prefetch" as="image" href="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-01.png?t=1670932317000">
-    <link rel="prefetch" as="image" href="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-02.png?t=1670932317000">
-    <link rel="prefetch" as="image" href="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-03.png?t=1670932317000">
-    <link rel="prefetch" as="image" href="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-04.png?t=1670932317000">
-    <link rel="prefetch" as="image" href="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-05.png?t=1670932317000">
+  <!-- prefetch images: https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ -->
+  <link rel="prefetch" as="image"
+    href="https://studio.code.org/v3/assets/5-IaxRvGY4VSCpbMf9JSgaFyrw9l6lBpwMY5QG1_6L4/client.png">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js">
 
-    <link rel="prefetch" as="image" href="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/veg-nonveg.png?t=1670932317000" >
-    <link rel="prefetch" as="image" href="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Non-veg.png?t=1670932317000" >
-    <link rel="prefetch" as="image" href="https://studio.code.org/v3/assets/ai36I_gY5JPKznE1ttg-CqVl0NhRRSPu1b34n7Ctx6c/Non-veg.png?t=1671892191000" >    
+  </script>
 
-    <link rel="stylesheet" href="./style.css" >
-    <script type="module" src="./app.js">
 
-    </script>
-    
-    
-    <title>PizzaMaker</title>
+  <title>PizzaNaHora</title>
 </head>
+
 <body>
+  <header class="header">
+    <h1>Pizza na Hora</h1>
+  </header>
+  <main>
+    <div class="buttons">
+      <button id="pizzasButton">Pizzas</button>
+      <button id="sandubasButton">Sandubas</button>
+      <button id="facaButton">Faça a Sua</button>
+    </div>
 
-  <div id="screenMaker">
-      <header>
-        <div class="top-area">
-        <h1>Monte sua Pizza</h1>
+    <div class="pizzas">
+      <div class="menu-pizzas">
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/Pizza-de-calabresa 1.png" alt="Pizza de Calabresa">
+            <div class="info-pizza">
+              <div class="informativo">
+                <p class="nome">Calabresa</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/Pizza-de-calabresa 1.png" alt="Pizza de Calabresa">
+            <div class="info-pizza">
+              <div class="informativo">
+                <p class="nome">Calabresa</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/Pizza-de-calabresa 1.png" alt="Pizza de Calabresa">
+            <div class="info-pizza">
+              <div class="informativo">
+                <p class="nome">Calabresa</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/Pizza-de-calabresa 1.png" alt="Pizza de Calabresa">
+            <div class="info-pizza">
+              <div class="informativo">
+                <p class="nome">Calabresa</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/Pizza-de-calabresa 1.png" alt="Pizza de Calabresa">
+            <div class="info-pizza">
+              <div class="informativo">
+                <p class="nome">Calabresa</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/Pizza-de-calabresa 1.png" alt="Pizza de Calabresa">
+            <div class="info-pizza">
+              <div class="informativo">
+                <p class="nome">Calabresa</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      </header> 
+    </div>
 
-      <div class="row">
-        <section>
-            <h2>Massa:</h2>
-            <ul>
-            <li>
-                <input type="radio" id="radioBase1" name="massa" value="borda">
-                <label for="radioBase1">
-                  <img class="img-icon" src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-01.png?t=1670932317000" alt="borda recheada">
-                </label>
-            </li>
-            <li>
-                <input type="radio" id="radioBase2" name="massa" value="tradicional">
-                <label for="radioBase2">
-                  <img class="img-icon" src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-02.png?t=1670932317000" alt="massa tradicional">
-                </label>
-            </li>
-            <li>
-                <input type="radio" id="radioBase3" name="massa" value="fina">
-                <label for="radioBase3">
-                  <img class="img-icon" src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-03.png?t=1670932317000" alt="massa fina">
-                </label>
-            </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Molho:</h2>
-            <ul>
-            <li>
-                <input type="radio" id="radioRedSauce" name="molho" value="vermelho">
-                <label for="radioRedSauce">
-                  <img class="img-icon" src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-05.png?t=1670932317000" alt="molho vermelho">
-                </label>
-              </li>
-              <li>
-                <input type="radio" id="radioYellowSauce" name="molho" value="amarelo">
-                <label for="radioYellowSauce">
-                  <img class="img-icon" src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-04.png?t=1670932317000" alt="molho vermelho">
-                </label>
-            </li>
-            </ul>
-        </section>
-        
+    <div class="sandubas" style="display: none;">
+      <div class="menu-sandubas">
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/images (3).jpg" alt="Big Kahuna Burger" width="140px" height="150px">
+            <div class="info-sanduba">
+              <div class="informativo">
+                <p class="nome">Big Kahuna</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/images (3).jpg" alt="Big Kahuna Burger" width="140px" height="150px">
+            <div class="info-sanduba">
+              <div class="informativo">
+                <p class="nome">Big Kahuna</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/images (3).jpg" alt="Big Kahuna Burger" width="140px" height="150px">
+            <div class="info-sanduba">
+              <div class="informativo">
+                <p class="nome">Big Kahuna</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/images (3).jpg" alt="Big Kahuna Burger" width="140px" height="150px">
+            <div class="info-sanduba">
+              <div class="informativo">
+                <p class="nome">Big Kahuna</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/images (3).jpg" alt="Big Kahuna Burger" width="140px" height="150px">
+            <div class="info-sanduba">
+              <div class="informativo">
+                <p class="nome">Big Kahuna</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/images (3).jpg" alt="Big Kahuna Burger" width="140px" height="150px">
+            <div class="info-sanduba">
+              <div class="informativo">
+                <p class="nome">Big Kahuna</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/images (3).jpg" alt="Big Kahuna Burger" width="140px" height="150px">
+            <div class="info-sanduba">
+              <div class="informativo">
+                <p class="nome">Big Kahuna</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-container">
+            <img src="./assets/images/images (3).jpg" alt="Big Kahuna Burger" width="140px" height="150px">
+            <div class="info-sanduba">
+              <div class="informativo">
+                <p class="nome">Big Kahuna</p>
+                <span class="sabor">Mussarela, Calabresa e Cebola.</span>
+              </div>
+              <div class="precos">
+                <p class="G">GRANDE = R$50,00</p>
+                <p class="M">MEDIA = R$40,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <section>
-          <h2>Tipo:</h2>
-          <ul>
+    </div>
+
+    <div class="facaSua" style="display: none;">
+      <div class="seuPedido">
+        <h2>Monte a sua Pizza:</h2>
+        <div class="massa-section">
+          <p>Massa:</p>
+          <ul class="massa">
+            <li>
+              <input type="radio" id="radioBase1" name="massa" value="borda">
+              <label for="radioBase1">
+                <img class="img-icon"
+                  src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-01.png?t=1670932317000"
+                  alt="borda recheada">
+              </label>
+            </li>
+            <li>
+              <input type="radio" id="radioBase2" name="massa" value="tradicional">
+              <label for="radioBase2">
+                <img class="img-icon"
+                  src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-02.png?t=1670932317000"
+                  alt="massa tradicional">
+              </label>
+            </li>
+            <li>
+              <input type="radio" id="radioBase3" name="massa" value="fina">
+              <label for="radioBase3">
+                <img class="img-icon"
+                  src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-03.png?t=1670932317000"
+                  alt="massa fina">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="molho-section">
+          <p>Molho:</p>
+          <ul class="molho">
+            <li>
+              <input type="radio" id="radioRedSauce" name="molho" value="vermelho">
+              <label for="radioRedSauce">
+                <img class="img-icon"
+                  src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-05.png?t=1670932317000"
+                  alt="molho vermelho">
+              </label>
+            </li>
+            <li>
+              <input type="radio" id="radioYellowSauce" name="molho" value="amarelo">
+              <label for="radioYellowSauce">
+                <img class="img-icon"
+                  src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-04.png?t=1670932317000"
+                  alt="molho vermelho">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="tipo-section">
+          <p>Tipo:</p>
+          <ul class="tipo">
             <li>
               <input type="checkbox" id="checkboxVeg" name="recheio" value="verdura">
-              <label for="checkboxVeg">Verdura</label>
+              <label for="checkboxVeg" id="verdura">Verdura</label>
             </li>
             <li>
               <input type="checkbox" id="checkboxNon-veg" name="recheio" value="carne">
-              <label for="checkboxNon-veg">Carne</label>
+              <label for="checkboxNon-veg" id="carne">Carne</label>
             </li>
           </ul>
-        </section>
-        <section>
-          <img  id="img-client" src="https://padariaalieske.com.br/wp-content/uploads/2021/10/moca-comendo-pizza-PNG-783x1024.png" alt="garota comendo uma fatia de pizza"/>
-        </section>
-      </div>
-      <footer>
-        <button class="hidden"  name="buttonCreate" id="buttonCreate"> ➡️ </button>
-      </footer>
-    </div>
-
-    <section id="screenPizza" class="hidden">
-        <div id="imagens" >
-            <img id="imageBase" src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-03.png?t=1670932317000" alt="massa">
-            
-            <img class="hidden" id="imageYellowSauce" src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-04.png?t=1670932317000" alt="molho amarelo">
-            <img class="hidden" id="imageRedSauce" src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-05.png?t=1670932317000" alt="molho vermelho">
-            
-            <img class="hidden" id="imageVegNon-veg" src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/veg-nonveg.png?t=1670932317000" alt="Non-Veg">
-            <img class="hidden" id="imageVeg" src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Veg.png?t=1670932317000" alt="Non-Veg">
-            <img class="hidden" id="imageNon-veg" src="https://studio.code.org/v3/assets/ai36I_gY5JPKznE1ttg-CqVl0NhRRSPu1b34n7Ctx6c/Non-veg.png?t=1671892191000" alt="Non-Veg">
         </div>
-        <footer>
-          <button id="buttonBack">⬅️</button>
-        </footer>
-    </section>   
+      </div>
+      <button class="hidden" name="buttonCreate" id="buttonCreate">Finalizar o Pedido</button>
+      <img src="./assets/images/pizza.jpg" alt="Pizza meme" id="meme">
+    </div>
+    <section id="screenPizza" class="hidden">
+      <div id="imagens">
+        <img id="imageBase"
+          src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-03.png?t=1670932317000"
+          alt="massa">
+        <img class="hidden" id="imageYellowSauce"
+          src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-04.png?t=1670932317000"
+          alt="molho amarelo">
+        <img class="hidden" id="imageRedSauce"
+          src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Pizzaa-05.png?t=1670932317000"
+          alt="molho vermelho">
+        <img class="hidden" id="imageVegNon-veg"
+          src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/veg-nonveg.png?t=1670932317000"
+          alt="Non-Veg">
+        <img class="hidden" id="imageVeg"
+          src="https://studio.code.org/v3/assets/1M0wVT7H--jMKxjDJMc3ZQZGs7pYH3KRZNxtxFT3m3U/Veg.png?t=1670932317000"
+          alt="Non-Veg">
+        <img class="hidden" id="imageNon-veg"
+          src="https://studio.code.org/v3/assets/ai36I_gY5JPKznE1ttg-CqVl0NhRRSPu1b34n7Ctx6c/Non-veg.png?t=1671892191000"
+          alt="Non-Veg">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <h2>Ajustado por <a href="https://github.com/Gustavo-S-Nascimento" target="_blank">Pascal</a></h2>
+  </footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("sandubasButton").addEventListener("click", function () {
+        document.querySelector(".pizzas").style.display = "none";
+        document.querySelector(".facaSua").style.display = "none";
+        document.querySelector(".sandubas").style.display = "flex";
+      });
+
+      document.getElementById("pizzasButton").addEventListener("click", function () {
+        document.querySelector(".pizzas").style.display = "flex";
+        document.querySelector(".sandubas").style.display = "none";
+        document.querySelector(".facaSua").style.display = "none";
+      });
+
+      document.getElementById("facaButton").addEventListener("click", function () {
+        document.querySelector(".pizzas").style.display = "none";
+        document.querySelector(".sandubas").style.display = "none";
+        document.querySelector(".facaSua").style.display = "flex";
+      });
+      document.getElementById("buttonCreate").addEventListener("click", function () {
+        document.getElementById("meme").style.display = "none";
+      });
+    });
+  </script>
 
 </body>
+<div id="loader">
+  <img src="./assets/images/pizzaria.webp" alt="Pizzaria Logo" width="250px" height="200px">
+  <h1>Pizza na hora</h1>
+  <p>A melhor pizzaria do seu dia a dia, venha comer com a gente (Lá Ele)</p>
+</div>
+
 </html>
