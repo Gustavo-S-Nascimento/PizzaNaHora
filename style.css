@@ -6,6 +6,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* outline: 1px solid red;
+  outline-offset: -1px; */
 }
 
 body {
@@ -73,14 +75,16 @@ h1 {
 }
 
 .card {
-  width: 159px;
+  width: 179px;
   height: 271px;
   border-radius: 15px;
   background-color: rgba(49, 25, 3, 0.70);
   display: flex;
+  overflow: hidden;
 }
 
 .card-container {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,13 +112,13 @@ h1 {
 }
 
 .info-pizza .nome {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
 }
 
 .info-pizza .sabor {
-  font-size: 8px;
-  font-weight: 800;
+  font-size: 10px;
+  font-weight: 700;
 }
 
 .info-pizza .G,
@@ -130,8 +134,8 @@ h1 {
 }
 
 .info-sanduba .sabor {
-  font-size: 8px;
-  font-weight: 800;
+  font-size: 10px;
+  font-weight: 700;
 }
 
 .info-sanduba .G,
@@ -258,13 +262,15 @@ ul li input {
 
 @keyframes pulse {
   0% {
-      transform: scale(0.9);
+    transform: scale(0.9);
   }
+
   50% {
-      transform: scale(1);
+    transform: scale(1);
   }
+
   100% {
-      transform: scale(0.9);
+    transform: scale(0.9);
   }
 }
 
@@ -279,7 +285,7 @@ footer {
   border-radius: 30px 30px 0 0;
   margin-top: 15px;
   color: #b92217;
-  font-family: 'Mulish',Arial, Helvetica, sans-serif;
+  font-family: 'Mulish', Arial, Helvetica, sans-serif;
 }
 
 footer a {
@@ -290,10 +296,14 @@ footer a {
 #screenPizza {
   border: 1px red solid;
   border-radius: 10px;
-  background-color: #fff;
+  background-image: url(https://a-static.mlcdn.com.br/400x600/bolsa-termica-40-litros-nao-vaza-agua-bebidas-pesca-gobi-brasil/gobibrasil/bt40lts/057c64159eed0a0f0d554d5de265fc24.jpeg);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: #fff;
   width: 300px;
   height: 470px;
+  margin: 15px;
 }
 
 
@@ -307,7 +317,7 @@ footer a {
   padding-top: 12px;
   width: 152px;
   height: 200px;
-  }
+}
 
 #imagens img {
   width: 200px;
@@ -352,8 +362,52 @@ footer a {
   color: #FFF;
 }
 
+#loader p {
+  width: 85%;
+}
+
 #loader img {
   border: 3px solid #fff;
   border-radius: 15px;
 }
 
+.img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.img img {
+  object-fit: cover;
+}
+
+#loadingScreen {
+  display: none;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-size: 30px;
+  font-family: 'Mulish', Arial, Helvetica, sans-serif;
+  top: 0;
+  left: 0;
+  gap: 15px;
+  z-index: 999;
+  /* Outros estilos de posicionamento, cor de fundo, etc. */
+}
+
+#pedido {
+  display: none;
+  color: #fff;
+  font-family: 'Mulish', Arial, Helvetica, sans-serif;
+  width: 300px;
+  height: 170px;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 15px;
+}

@@ -1,12 +1,13 @@
 import {
-    onEvent, 
-    showElement, 
-    setScreen} from './code.org.js';
+    onEvent,
+    showElement,
+    setScreen
+} from './code.org.js';
 import {
-escolherMassa,
-escolherMolho,
-escolherTipo
- } from './escolhas.js';
+    escolherMassa,
+    escolherMolho,
+    escolherTipo
+} from './escolhas.js';
 
 
 //Quando 1 das 3 opções estiver marcada o botão create irá aparecer
@@ -26,14 +27,17 @@ onEvent("buttonCreate", "click", function () {
     escolherMassa();
     escolherMolho();
     escolherTipo();
-});
-
-onEvent("buttonBack", "click", function () {
-    setScreen("screenMaker");
+    document.querySelector(".facaSua").style.display = "none";
+    document.querySelector("#screenPizza").style.display = "flex";
+    document.querySelector("#pedido").style.display = "flex";
+    document.querySelector("#loadingScreen").style.display = "flex";
+    setTimeout(function () {
+        document.getElementById("loadingScreen").style.display = "none";
+    }, 3000);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
-      document.getElementById("loader").style.display = "none";
-    }, 5000);
-  });
+        document.getElementById("loader").style.display = "none";
+    }, 3000);
+});
