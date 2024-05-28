@@ -4,6 +4,7 @@ import { Header } from './components/Structure/header'
 import { Options } from './components/Structure/options'
 import { Pizzas } from './components/Pizzas/pizzas'
 import { Sandubas } from './components/Sandubas/sandubas'
+import '../style.css'
 
 function App() {
 
