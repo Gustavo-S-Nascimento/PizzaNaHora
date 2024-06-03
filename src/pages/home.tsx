@@ -4,10 +4,19 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 
-import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
 import { SVGProps } from "react"
 import { JSX } from "react/jsx-runtime"
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet"
+import { Separator } from "@/components/ui/separator"
+
 
 export default function Home() {
     return (
@@ -30,10 +39,23 @@ export default function Home() {
                         </a>
                     </nav>
                     <div className="md:hidden">
-                        <Button size="icon" variant="outline">
-                            <MenuIcon className="h-6 w-6" />
-                            <span className="sr-only">Toggle menu</span>
-                        </Button>
+                        <Sheet>
+                            <SheetTrigger className="border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 flex justify-center items-center rounded"><MenuIcon className="h-6 w-6" /></SheetTrigger>
+                            <SheetContent>
+                                <SheetHeader>
+                                    <SheetTitle>Pizzaria Chantly</SheetTitle>
+                                    <Separator></Separator>
+                                    <SheetDescription>
+                                        <a
+                                            className="inline-flex items-center justify-center rounded-md bg-red-500 px-6 py-3 text-white shadow-sm transition-colors hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                                            href="/menu"
+                                        >
+                                            Conheça o Cardápio
+                                        </a>
+                                    </SheetDescription>
+                                </SheetHeader>
+                            </SheetContent>
+                        </Sheet>
                     </div>
                 </div>
             </header>
