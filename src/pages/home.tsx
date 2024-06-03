@@ -16,27 +16,34 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 
 
 export default function Home() {
     return (
         <>
-            <header className="bg-white shadow-sm w-full">
+            <header className="bg-white shadow-sm w-full fixed">
                 <div className="container mx-auto flex items-center justify-between py-4 px-6">
                     <a className="flex items-center" href="/">
                         <CatIcon className="h-8 w-8 text-red-500" />
                         <span className="ml-2 text-xl font-bold">Pizzaria Chantly</span>
                     </a>
-                    <nav className="hidden md:flex gap-5">
-                        <a className="text-gray-600 border p-[1px] border-transparent hover:text-white hover:border hover:p-[1px] hover:rounded hover:border-red-500 hover:bg-red-500 transition-all" href="#Home">
+                    <nav className="hidden flex justify-center items-center md:flex gap-5">
+                        <a className="flex justify-center items-center h-8 text-gray-600 border p-[1px] border-transparent hover:text-white hover:border hover:p-[1px] hover:rounded hover:border-red-500 hover:bg-red-500 transition-all" href="#Home">
                             Início
                         </a>
-                        <a className="text-gray-600 border p-[1px] border-transparent hover:text-gray-800 hover:border hover:p-[1px] hover:rounded hover:border-red-500 transition-all" href="#About">
+                        <a className="flex justify-center items-center h-8 text-gray-600 border p-[1px] border-transparent hover:text-white hover:border hover:p-[1px] hover:rounded hover:border-red-500 hover:bg-red-500 transition-all" href="#About">
                             Sobre
                         </a>
-                        <a className="text-gray-600 border p-[1px] border-transparent hover:text-gray-800 hover:border hover:p-[1px] hover:rounded hover:border-red-500 transition-all" href="#Menu">
+                        <a className="flex justify-center items-center h-8 text-gray-600 border p-[1px] border-transparent hover:text-white hover:border hover:p-[1px] hover:rounded hover:border-red-500 hover:bg-red-500 transition-all" href="#Menu">
                             Destaques
                         </a>
+                        <Avatar>
+                            <AvatarImage src="/CatAvatar.png" />
+                            <AvatarFallback>CN</AvatarFallback>
+                        </Avatar>
+
                     </nav>
                     <div className="md:hidden">
                         <Sheet>
@@ -91,7 +98,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section className="py-20" id="About">
+                <section className="py-20 target:scroll-my-10" id="About">
                     <div className="container mx-auto px-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
@@ -217,17 +224,14 @@ export default function Home() {
                             <span className="text-xl font-bold">Pizzaria Delícia</span>
                         </div>
                         <nav className="mt-4 md:mt-0 space-x-6">
-                            <a className="text-gray-400 hover:text-white" href="#">
+                            <a className="text-gray-400 hover:text-white" href="#Home">
                                 Início
                             </a>
-                            <a className="text-gray-400 hover:text-white" href="#">
-                                Cardápio
-                            </a>
-                            <a className="text-gray-400 hover:text-white" href="#">
+                            <a className="text-gray-400 hover:text-white" href="#About">
                                 Sobre
                             </a>
-                            <a className="text-gray-400 hover:text-white" href="#">
-                                Contato
+                            <a className="text-gray-400 hover:text-white" href="#Menu">
+                                Destaques
                             </a>
                         </nav>
                     </div>
