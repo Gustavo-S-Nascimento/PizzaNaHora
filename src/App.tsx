@@ -1,7 +1,7 @@
 import './App.css'
-import { Route, BrowserRouter, Routes } from 'react-router-dom'
+// import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import Home from './pages/home'
-import Menu from './pages/menu'
+// import Menu from './pages/menu'
 
 function App() {
   return (
