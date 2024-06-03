@@ -6,12 +6,13 @@ import Menu from './pages/menu'
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Home />
+      {/* <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/menu' element={<Menu />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   )
 }
