@@ -38,7 +38,7 @@ export default function Home() {
         <>
             <header className="bg-white shadow-sm w-full fixed">
                 <div className="container mx-auto flex items-center justify-between py-4 px-6">
-                    <a className="flex items-center" href="/PizzaNaHora">
+                    <a className="flex items-center" href="/">
                         <CatIcon className="h-8 w-8 text-red-500" />
                         <span className="ml-2 text-xl font-bold">Pizzaria Chantly</span>
                     </a>
@@ -131,7 +131,7 @@ export default function Home() {
                                     <SheetDescription>
                                         <a
                                             className="inline-flex items-center justify-center rounded-md bg-red-500 px-6 py-3 text-white shadow-sm transition-colors hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                                            href="/PizzaNaHora/menu"
+                                            href="/menu"
                                         >
                                             Conheça o Cardápio
                                         </a>
@@ -153,7 +153,7 @@ export default function Home() {
                             <div className="flex space-x-4">
                                 <a
                                     className="inline-flex items-center justify-center rounded-md bg-red-500 px-6 py-3 text-white shadow-sm transition-colors hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                                    href="/PizzaNaHora/menu"
+                                    href="/menu"
                                 >
                                     Conheça o Cardápio
                                 </a>
