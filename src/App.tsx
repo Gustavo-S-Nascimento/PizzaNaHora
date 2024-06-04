@@ -6,10 +6,10 @@ import Menu from './pages/menu'
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/PizzaNahora">
         <Routes>
-          <Route path='/PizzaNaHora' element={<Home />} />
-          <Route path='/PizzaNaHora/menu' element={<Menu />} />
+          <Route path='/' element={<Home />} />
+            <Route path='/menu' element={<Menu />} />
         </Routes>
       </BrowserRouter>
     </>
