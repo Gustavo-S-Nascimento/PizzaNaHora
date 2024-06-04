@@ -1,4 +1,4 @@
-import { CatIcon } from "@/components/Structure/CatIcon";
+import { CatIcon } from "@/components/Icons/CatIcon";
 
 export default function Footer() {
     return (

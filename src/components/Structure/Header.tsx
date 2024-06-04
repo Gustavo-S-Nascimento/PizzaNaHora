@@ -7,8 +7,8 @@ import {
     SheetTrigger
 } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
-import { CatIcon } from "@/components/Structure/CatIcon";
-import { MenuIcon } from "@/components/Structure/MenuIcon";
+import { CatIcon } from "@/components/Icons/CatIcon";
+import { MenuIcon } from "@/components/Icons/MenuIcon";
 import Login from "./Login";
 
 export default function Header() {
