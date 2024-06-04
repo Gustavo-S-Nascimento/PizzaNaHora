@@ -1,9 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/1ZGDqZY5lgp
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
-
 import {
     Card,
     CardContent,
@@ -39,10 +33,6 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 
-
-
-
-
 export default function Home() {
     return (
         <>
@@ -68,7 +58,7 @@ export default function Home() {
                                 <AvatarFallback>CN</AvatarFallback>
                             </Avatar></DialogTrigger>
                             <DialogContent className="flex justify-center">
-                                <Tabs defaultValue="account" className="w-[400px]">
+                                <Tabs defaultValue="login" className="w-[400px]">
                                     <TabsList className="grid w-full grid-cols-2">
                                         <TabsTrigger value="login">Login</TabsTrigger>
                                         <TabsTrigger value="register">Register</TabsTrigger>

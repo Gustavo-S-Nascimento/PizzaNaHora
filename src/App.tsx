@@ -1,18 +1,17 @@
 import './App.css'
-// import { Route, BrowserRouter, Routes } from 'react-router-dom'
+import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import Home from './pages/home'
-// import Menu from './pages/menu'
+import Menu from './pages/menu'
 
 function App() {
   return (
     <>
-      <Home />
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/menu' element={<Menu />} />
+          <Route path='/PizzaNaHora' element={<Home />} />
+          <Route path='/PizzaNaHora/menu' element={<Menu />} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </>
   )
 }

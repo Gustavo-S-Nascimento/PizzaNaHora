@@ -1,11 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowBigLeft } from "lucide-react";
 
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/aXaMEIFzkku
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
-*/
 export default function Menu() {
     return (
         <div className="w-full max-w-4xl mx-auto px-4 md:px-6">
