@@ -13,7 +13,7 @@ import Login from "./Login";
 
 export default function Header() {
     return (
-        <header className="bg-white shadow-sm w-full fixed">
+        <header className="bg-white shadow-sm w-full fixed z-10">
             <div className="container mx-auto flex items-center justify-between py-4 px-6">
                 <a className="flex items-center" href="/PizzaNaHora/">
                     <CatIcon className="h-8 w-8 text-red-500" />
