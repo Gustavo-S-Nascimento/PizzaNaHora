@@ -12,7 +12,7 @@ export default function Menu() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/Pizza-Vegetariana.jpg"
+                                src="./Pizza-Vegetariana.jpg"
                                 alt="Pizza Vegetariana"
                                 width={300}
                                 height={200}
@@ -26,7 +26,7 @@ export default function Menu() {
                         </div>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/Pizza-Pepperoni.jpg"
+                                src="./Pizza-Pepperoni.jpg"
                                 alt="Pizza Pepperoni"
                                 width={300}
                                 height={200}
@@ -40,7 +40,7 @@ export default function Menu() {
                         </div>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/Pizza-Margherita.jpg"
+                                src="./Pizza-Margherita.jpg"
                                 alt="Pizza Margherita"
                                 width={300}
                                 height={200}
@@ -54,7 +54,7 @@ export default function Menu() {
                         </div>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/Pizza-QuatroQueijos.webp"
+                                src="./Pizza-QuatroQueijos.webp"
                                 alt="Pizza Quatro Queijos"
                                 width={300}
                                 height={200}
@@ -75,7 +75,7 @@ export default function Menu() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/San-Frango.jpeg"
+                                src="./San-Frango.jpeg"
                                 alt="Sanduíche de Frango"
                                 width={300}
                                 height={200}
@@ -89,7 +89,7 @@ export default function Menu() {
                         </div>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/San-atum.jpg"
+                                src="./San-atum.jpg"
                                 alt="Sanduíche de Atum"
                                 width={300}
                                 height={200}
@@ -103,7 +103,7 @@ export default function Menu() {
                         </div>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/San-Vegetariano.jpeg"
+                                src="./San-Vegetariano.jpeg"
                                 alt="Sanduíche Vegetariano"
                                 width={300}
                                 height={200}
@@ -117,7 +117,7 @@ export default function Menu() {
                         </div>
                         <div className="bg-white rounded-lg shadow-md overflow-hidden">
                             <img
-                                src="/San-Rosbife.webp"
+                                src="./San-Rosbife.webp"
                                 alt="Sanduíche de Rosbife"
                                 width={300}
                                 height={200}

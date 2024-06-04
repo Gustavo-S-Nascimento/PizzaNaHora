@@ -54,7 +54,7 @@ export default function Home() {
                         </a>
                         <Dialog>
                             <DialogTrigger><Avatar>
-                                <AvatarImage src="/CatAvatar.png" />
+                                <AvatarImage src="" />
                                 <AvatarFallback>CN</AvatarFallback>
                             </Avatar></DialogTrigger>
                             <DialogContent className="flex justify-center">
@@ -131,7 +131,7 @@ export default function Home() {
                                     <SheetDescription>
                                         <a
                                             className="inline-flex items-center justify-center rounded-md bg-red-500 px-6 py-3 text-white shadow-sm transition-colors hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                                            href="/menu"
+                                            href="/PizzaNaHora/menu"
                                         >
                                             Conheça o Cardápio
                                         </a>
@@ -164,7 +164,7 @@ export default function Home() {
                                 alt="Pizza"
                                 className="rounded-lg shadow-lg"
                                 height={400}
-                                src="/Pizza-home.jpg"
+                                src="./Pizza-home.jpg"
                                 style={{
                                     aspectRatio: "600/400",
                                     objectFit: "cover",
@@ -182,7 +182,7 @@ export default function Home() {
                                     alt="Sanduíche"
                                     className="rounded-lg shadow-lg"
                                     height={300}
-                                    src="/PizzaCat.jpg"
+                                    src="./PizzaCat.jpg"
                                     style={{
                                         aspectRatio: "600/400",
                                         objectFit: "cover",
@@ -213,7 +213,7 @@ export default function Home() {
                                     alt="Pizza Margherita"
                                     className="rounded-t-lg"
                                     height={300}
-                                    src="/Pizza-Margherita.jpg"
+                                    src="./Pizza-Margherita.jpg"
                                     style={{
                                         aspectRatio: "400/300",
                                         objectFit: "cover",
@@ -241,7 +241,7 @@ export default function Home() {
                                     alt="Sanduíche Club"
                                     className="rounded-t-lg"
                                     height={300}
-                                    src="/Sanduiche-Club.jpg"
+                                    src="./Sanduiche-Club.jpg"
                                     style={{
                                         aspectRatio: "400/300",
                                         objectFit: "cover",
@@ -267,7 +267,7 @@ export default function Home() {
                                     alt="Pizza Pepperoni"
                                     className="rounded-t-lg"
                                     height={300}
-                                    src="/Pizza-Pepperoni.jpg"
+                                    src="./Pizza-Pepperoni.jpg"
                                     style={{
                                         aspectRatio: "400/300",
                                         objectFit: "cover",
