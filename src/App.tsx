@@ -8,8 +8,10 @@ function App() {
     <>
       <BrowserRouter basename="/PizzaNahora">
         <Routes>
-          <Route path='/' element={<Home />} />
-            <Route path='/menu' element={<Menu />} />
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="menu" element={<Menu />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
