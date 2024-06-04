@@ -38,7 +38,7 @@ export default function Home() {
         <>
             <header className="bg-white shadow-sm w-full fixed">
                 <div className="container mx-auto flex items-center justify-between py-4 px-6">
-                    <a className="flex items-center" href="/">
+                    <a className="flex items-center" href="/PizzaNaHora/">
                         <CatIcon className="h-8 w-8 text-red-500" />
                         <span className="ml-2 text-xl font-bold">Pizzaria Chantly</span>
                     </a>
