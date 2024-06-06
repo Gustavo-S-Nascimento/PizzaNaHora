@@ -6,7 +6,7 @@ import Menu from './pages/menu'
 function App() {
   return (
     <>
-      <BrowserRouter basename="/PizzaNahora">
+      <BrowserRouter basename={process.env.BASE_URL}>
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />

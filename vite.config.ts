@@ -3,8 +3,10 @@ import { resolve } from 'path';
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
+const BASE = process.env.BASE_URL?? '/';
+
 export default defineConfig({
-  base: '/PizzaNaHora/',
+  base: BASE,
   build: {
     rollupOptions: {
       input: {
