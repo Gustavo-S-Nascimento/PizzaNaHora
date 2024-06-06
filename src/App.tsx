@@ -8,10 +8,8 @@ function App() {
     <>
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            <Route path="/menu" element={<Menu />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="menu" element={<Menu />} />
         </Routes>
       </BrowserRouter>
     </>
