@@ -10,15 +10,16 @@ import { Separator } from "@/components/ui/separator";
 import { CatIcon } from "@/components/Icons/CatIcon";
 import { MenuIcon } from "@/components/Icons/MenuIcon";
 import Login from "./Login";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
         <header className="bg-white shadow-sm w-full fixed z-10">
             <div className="container mx-auto flex items-center justify-between py-4 px-6">
-                <a className="flex items-center" href="/PizzaNaHora/">
+                <Link className="flex items-center" to="/">
                     <CatIcon className="h-8 w-8 text-red-500" />
                     <span className="ml-2 text-xl font-bold">Pizzaria Chantly</span>
-                </a>
+                </Link>
                 <nav className="hidden flex justify-center items-center md:flex gap-5">
                     <a className="flex justify-center items-center h-8 text-gray-600 border p-[1px] border-transparent hover:text-white hover:border hover:p-[1px] hover:rounded hover:border-red-500 hover:bg-red-500 transition-all" href="#Home">
                         Início

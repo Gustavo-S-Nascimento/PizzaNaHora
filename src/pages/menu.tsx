@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowBigLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Menu() {
     return (
         <div className="w-full max-w-4xl mx-auto px-4 md:px-6">
-            <a href="/"><Button className="my-2"><ArrowBigLeft></ArrowBigLeft></Button></a>
+            <Link to="/"><Button className="my-2"><ArrowBigLeft></ArrowBigLeft></Button></Link>
             <h1 className="text-3xl font-bold mb-8">Nosso Cardápio</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>

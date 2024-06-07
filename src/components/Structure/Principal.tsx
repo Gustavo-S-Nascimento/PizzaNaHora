@@ -3,6 +3,7 @@ import {
     CardContent
 } from "@/components/ui/card";
 import { Slide, Fade } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 export default function Principal() {
     return (
@@ -15,12 +16,12 @@ export default function Principal() {
                             Experimente os melhores sabores da nossa pizzaria. Feitos com ingredientes frescos e de alta qualidade.
                         </p>
                         <div className="flex space-x-4">
-                            <a
+                            <Link
                                 className="inline-flex items-center justify-center rounded-md bg-red-500 px-6 py-3 text-white shadow-sm transition-colors hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                                href="menu"
+                                to="/menu"
                             >
                                 Conheça o Cardápio
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="md:w-1/2 mb-8 md:mb-0">
