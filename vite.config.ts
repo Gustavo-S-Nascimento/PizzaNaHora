@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
-const BASE = (process.env.VITE_APP_BASE_URL);
+const BASE = (process.env.PRODUCTION_APP_BASE_URL);
 
 
 export default defineConfig({
