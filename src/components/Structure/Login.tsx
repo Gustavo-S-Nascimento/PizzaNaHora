@@ -51,13 +51,22 @@ const getFromLocalStorage = (key: string) => {
     return value ? JSON.parse(value) : null;
 };
 
+// Função para obter lista de usuários do LocalStorage
+const getUserListFromLocalStorage = (): RegisterData[] => {
+    const users = getFromLocalStorage("users");
+    return users ? users : [];
+};
+
 export default function Login() {
     const [loginData, setLoginData] = useState<LoginData>({ username: "", password: "" });
     const [registerData, setRegisterData] = useState<RegisterData>({ name: "", username: "", password: "" });
+    const [loginError, setLoginError] = useState<string | null>(null);
+
     useEffect(() => {
-        const savedUser = getFromLocalStorage("user");
-        if (savedUser) {
-            setRegisterData(savedUser);
+        // Carrega lista de usuários ao iniciar
+        const savedUsers = getUserListFromLocalStorage();
+        if (savedUsers.length > 0) {
+            setRegisterData(savedUsers[0]);
         }
     }, []);
 
@@ -72,16 +81,24 @@ export default function Login() {
     const handleLoginSubmit = () => {
         const result = loginSchema.safeParse(loginData);
         if (result.success) {
-            // Sucesso na validação, você pode adicionar lógica de autenticação aqui
-            console.log("Login data is valid");
+            const users = getUserListFromLocalStorage();
+            const user = users.find(user => user.username === loginData.username && user.password === loginData.password);
+            if (user) {
+                console.log("Login successful");
+                setLoginError(null);
+            } else {
+                console.log("Invalid username or password");
+                setLoginError("Invalid username or password");
+            }
         }
     };
 
     const handleRegisterSubmit = () => {
         const result = registerSchema.safeParse(registerData);
         if (result.success) {
-            // Sucesso na validação, salvar dados no LocalStorage
-            saveToLocalStorage("user", registerData);
+            const users = getUserListFromLocalStorage();
+            users.push(registerData);
+            saveToLocalStorage("users", users);
             console.log("Register data is valid and saved");
         }
     };
@@ -127,6 +144,7 @@ export default function Login() {
                                         onChange={handleLoginChange}
                                     />
                                 </div>
+                                {loginError && <p className="text-red-500">{loginError}</p>}
                             </CardContent>
                             <CardFooter>
                                 <Button onClick={handleLoginSubmit}>Enter</Button>
