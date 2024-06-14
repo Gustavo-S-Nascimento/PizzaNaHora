@@ -83,3 +83,7 @@ Agradecemos por visitar a Pizzaria Chantly! Esperamos que desfrute de uma experi
 ---
 
 > "A comida é a linguagem universal da felicidade." - Equipe Pizzaria Chantly
+
+Slides Canva
+
+https://www.canva.com/design/DAGHbG5yZMU/Ay68ZUKtT-Khm4qiJ40AvA/edit?utm_content=DAGHbG5yZMU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
