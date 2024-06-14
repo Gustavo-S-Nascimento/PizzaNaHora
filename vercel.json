@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/menu",
+      "destination": "@/pages/menu.tsx"
+    },
+    {
+      "source": "/",
+      "destination": "@/pages/home.tsx"
+    }
+  ]
+}
