@@ -21,7 +21,7 @@ import {
     DialogContent,
     DialogTrigger
 } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 
 // Esquemas de validação com Zod
@@ -54,6 +54,12 @@ const getFromLocalStorage = (key: string) => {
 export default function Login() {
     const [loginData, setLoginData] = useState<LoginData>({ username: "", password: "" });
     const [registerData, setRegisterData] = useState<RegisterData>({ name: "", username: "", password: "" });
+    useEffect(() => {
+        const savedUser = getFromLocalStorage("user");
+        if (savedUser) {
+            setRegisterData(savedUser);
+        }
+    }, []);
 
     const handleLoginChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setLoginData({ ...loginData, [e.target.id]: e.target.value });
@@ -66,6 +72,7 @@ export default function Login() {
     const handleLoginSubmit = () => {
         const result = loginSchema.safeParse(loginData);
         if (result.success) {
+            // Sucesso na validação, você pode adicionar lógica de autenticação aqui
             console.log("Login data is valid");
         }
     };
@@ -110,7 +117,6 @@ export default function Login() {
                                         value={loginData.username}
                                         onChange={handleLoginChange}
                                     />
-
                                 </div>
                                 <div className="space-y-1">
                                     <Label htmlFor="password">Password</Label>
@@ -120,7 +126,6 @@ export default function Login() {
                                         value={loginData.password}
                                         onChange={handleLoginChange}
                                     />
-
                                 </div>
                             </CardContent>
                             <CardFooter>
@@ -145,7 +150,6 @@ export default function Login() {
                                         value={registerData.name}
                                         onChange={handleRegisterChange}
                                     />
-
                                 </div>
                                 <div className="space-y-1">
                                     <Label htmlFor="username">Username</Label>
@@ -155,7 +159,6 @@ export default function Login() {
                                         value={registerData.username}
                                         onChange={handleRegisterChange}
                                     />
-                                    
                                 </div>
                                 <div className="space-y-1">
                                     <Label htmlFor="password">Password</Label>
@@ -165,7 +168,6 @@ export default function Login() {
                                         value={registerData.password}
                                         onChange={handleRegisterChange}
                                     />
-                                    
                                 </div>
                             </CardContent>
                             <CardFooter>
