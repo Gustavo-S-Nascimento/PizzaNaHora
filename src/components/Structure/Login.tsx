@@ -21,71 +21,160 @@ import {
     DialogContent,
     DialogTrigger
 } from "@/components/ui/dialog";
+import { useState } from "react";
+import { z } from "zod";
+
+// Esquemas de validação com Zod
+const loginSchema = z.object({
+    username: z.string().min(1, "Username is required"),
+    password: z.string().min(1, "Password is required")
+});
+
+const registerSchema = z.object({
+    name: z.string().min(1, "Name is required"),
+    username: z.string().min(1, "Username is required"),
+    password: z.string().min(6, "Password must be at least 6 characters long")
+});
+
+// Tipos dos dados de formulário
+type LoginData = z.infer<typeof loginSchema>;
+type RegisterData = z.infer<typeof registerSchema>;
+
+// Função para salvar no LocalStorage
+const saveToLocalStorage = (key: string, value: any) => {
+    localStorage.setItem(key, JSON.stringify(value));
+};
+
+// Função para obter do LocalStorage
+const getFromLocalStorage = (key: string) => {
+    const value = localStorage.getItem(key);
+    return value ? JSON.parse(value) : null;
+};
 
 export default function Login() {
-    return <Dialog>
-        <DialogTrigger><Avatar>
-            <AvatarImage src="./CatAvatar.png" />
-            <AvatarFallback>CN</AvatarFallback>
-        </Avatar></DialogTrigger>
-        <DialogContent className="flex justify-center">
-            <Tabs defaultValue="login" className="w-[400px]">
-                <TabsList className="grid w-full grid-cols-2">
-                    <TabsTrigger value="login">Login</TabsTrigger>
-                    <TabsTrigger value="register">Register</TabsTrigger>
-                </TabsList>
-                <TabsContent value="login">
-                    <Card>
-                        <CardHeader>
-                            <CardTitle>Sign in</CardTitle>
-                            <CardDescription>
-                                Log in with your account.
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent className="space-y-2">
-                            <div className="space-y-1">
-                                <Label htmlFor="username">Username</Label>
-                                <Input id="username" placeholder="@JohnDoe" />
-                            </div>
-                            <div className="space-y-1">
-                                <Label htmlFor="password-login">Password</Label>
-                                <Input id="password-login" type="password" />
-                            </div>
+    const [loginData, setLoginData] = useState<LoginData>({ username: "", password: "" });
+    const [registerData, setRegisterData] = useState<RegisterData>({ name: "", username: "", password: "" });
 
-                        </CardContent>
-                        <CardFooter>
-                            <Button>Enter</Button>
-                        </CardFooter>
-                    </Card>
-                </TabsContent>
-                <TabsContent value="register">
-                    <Card>
-                        <CardHeader>
-                            <CardTitle>Sign up</CardTitle>
-                            <CardDescription>
-                                Create your account.
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent className="space-y-2">
-                            <div className="space-y-1">
-                                <Label htmlFor="name">Name</Label>
-                                <Input id="name" placeholder="John Doe" />
-                            </div>
-                            <div className="space-y-1">
-                                <Label htmlFor="username">Username</Label>
-                                <Input id="username" placeholder="@JohnDoe" />
-                            </div>
-                            <div className="space-y-1">
-                                <Label htmlFor="password-register">Password</Label>
-                                <Input id="password-register" type="password" />
-                            </div>
-                        </CardContent>
-                        <CardFooter>
-                            <Button>Create account</Button>
-                        </CardFooter>
-                    </Card>
-                </TabsContent>
-            </Tabs>
-        </DialogContent>
-    </Dialog>;
+    const handleLoginChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setLoginData({ ...loginData, [e.target.id]: e.target.value });
+    };
+
+    const handleRegisterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setRegisterData({ ...registerData, [e.target.id]: e.target.value });
+    };
+
+    const handleLoginSubmit = () => {
+        const result = loginSchema.safeParse(loginData);
+        if (result.success) {
+            console.log("Login data is valid");
+        }
+    };
+
+    const handleRegisterSubmit = () => {
+        const result = registerSchema.safeParse(registerData);
+        if (result.success) {
+            // Sucesso na validação, salvar dados no LocalStorage
+            saveToLocalStorage("user", registerData);
+            console.log("Register data is valid and saved");
+        }
+    };
+
+    return (
+        <Dialog>
+            <DialogTrigger>
+                <Avatar>
+                    <AvatarImage src="./CatAvatar.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+            </DialogTrigger>
+            <DialogContent className="flex justify-center">
+                <Tabs defaultValue="login" className="w-[400px]">
+                    <TabsList className="grid w-full grid-cols-2">
+                        <TabsTrigger value="login">Login</TabsTrigger>
+                        <TabsTrigger value="register">Register</TabsTrigger>
+                    </TabsList>
+                    <TabsContent value="login">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Sign in</CardTitle>
+                                <CardDescription>
+                                    Log in with your account.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-2">
+                                <div className="space-y-1">
+                                    <Label htmlFor="username">Username</Label>
+                                    <Input
+                                        id="username"
+                                        placeholder="@JohnDoe"
+                                        value={loginData.username}
+                                        onChange={handleLoginChange}
+                                    />
+
+                                </div>
+                                <div className="space-y-1">
+                                    <Label htmlFor="password">Password</Label>
+                                    <Input
+                                        id="password"
+                                        type="password"
+                                        value={loginData.password}
+                                        onChange={handleLoginChange}
+                                    />
+
+                                </div>
+                            </CardContent>
+                            <CardFooter>
+                                <Button onClick={handleLoginSubmit}>Enter</Button>
+                            </CardFooter>
+                        </Card>
+                    </TabsContent>
+                    <TabsContent value="register">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Sign up</CardTitle>
+                                <CardDescription>
+                                    Create your account.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-2">
+                                <div className="space-y-1">
+                                    <Label htmlFor="name">Name</Label>
+                                    <Input
+                                        id="name"
+                                        placeholder="John Doe"
+                                        value={registerData.name}
+                                        onChange={handleRegisterChange}
+                                    />
+
+                                </div>
+                                <div className="space-y-1">
+                                    <Label htmlFor="username">Username</Label>
+                                    <Input
+                                        id="username"
+                                        placeholder="@JohnDoe"
+                                        value={registerData.username}
+                                        onChange={handleRegisterChange}
+                                    />
+                                    
+                                </div>
+                                <div className="space-y-1">
+                                    <Label htmlFor="password">Password</Label>
+                                    <Input
+                                        id="password"
+                                        type="password"
+                                        value={registerData.password}
+                                        onChange={handleRegisterChange}
+                                    />
+                                    
+                                </div>
+                            </CardContent>
+                            <CardFooter>
+                                <Button onClick={handleRegisterSubmit}>Create account</Button>
+                            </CardFooter>
+                        </Card>
+                    </TabsContent>
+                </Tabs>
+            </DialogContent>
+        </Dialog>
+    );
 }
