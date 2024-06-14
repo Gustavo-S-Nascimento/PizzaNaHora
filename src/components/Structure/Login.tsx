@@ -61,6 +61,7 @@ export default function Login() {
     const [loginData, setLoginData] = useState<LoginData>({ username: "", password: "" });
     const [registerData, setRegisterData] = useState<RegisterData>({ name: "", username: "", password: "" });
     const [loginError, setLoginError] = useState<string | null>(null);
+    const [loggedInUser, setLoggedInUser] = useState<string | null>(null);
 
     useEffect(() => {
         // Carrega lista de usuários ao iniciar
@@ -86,6 +87,7 @@ export default function Login() {
             if (user) {
                 console.log("Login successful");
                 setLoginError(null);
+                setLoggedInUser(loginData.username);
             } else {
                 console.log("Invalid username or password");
                 setLoginError("Invalid username or password");
@@ -103,12 +105,19 @@ export default function Login() {
         }
     };
 
+    const getAvatarFallback = () => {
+        if (loggedInUser) {
+            return loggedInUser.slice(0, 2).toUpperCase();
+        }
+        return "CN";
+    };
+
     return (
         <Dialog>
             <DialogTrigger>
                 <Avatar>
-                    <AvatarImage src="./CatAvatar.png" />
-                    <AvatarFallback>CN</AvatarFallback>
+                    <AvatarImage src={loggedInUser ? "" : "./CatAvatar.png"} />
+                    <AvatarFallback>{getAvatarFallback()}</AvatarFallback>
                 </Avatar>
             </DialogTrigger>
             <DialogContent className="flex justify-center">
